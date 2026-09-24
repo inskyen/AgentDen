@@ -1,0 +1,27 @@
+# AgentDen v0 auditd rules -- TEMPLATE
+#
+# !!! Deploy ONLY with the owner's explicit authorization. !!!
+# Replace DEN_DIR with the real maze directory before installing,
+# then: cp auditd.rules /etc/audit/rules.d/agentden.rules && augenrules --load
+#
+# Layer 4 of AgentDen v0: watch every read/write/exec/attr change
+# on the maze and the key file. The agent reconciles this trail
+# daily against its own ops log (den reconcile).
+
+# --- maze: the 1296 files ---
+-w DEN_DIR -p rwxa -k agentden-maze
+
+# --- key file (agent side) ---
+-w AGENT_HOME/.config/agentden/den.key -p rwxa -k agentden-key
+
+# --- optional: filter out the agent's own accesses ---
+# If the agent runs as its own uid (recommended), uncomment the pair below
+# and comment out the plain -w lines above, so the agent's own legitimate
+# opens don't drown the trail in noise. Replace AGENT_UID.
+#
+# -a always,exit -F dir=DEN_DIR -F perm=rwxa -F auid!=AGENT_UID -k agentden-maze
+# -a always,exit -F path=AGENT_HOME/.config/agentden/den.key -F perm=rwxa -F auid!=AGENT_UID -k agentden-key
+
+# --- optional: watch the audit config itself ---
+# Anyone who edits these rules leaves a trace here first.
+-w /etc/audit/rules.d/agentden.rules -p wa -k agentden-rules
