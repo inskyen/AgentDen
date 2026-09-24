@@ -101,7 +101,7 @@ step-by-step guide. Two hard requirements, non-negotiable:
 
 ## License
 
-To be decided: MIT or Apache-2.0.
+MIT — see [LICENSE](LICENSE).
 
 ## Contributing
 

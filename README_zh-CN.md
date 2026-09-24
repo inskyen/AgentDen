@@ -85,7 +85,7 @@ python -m agentden.cli reconcile /srv/agentden --hours 24
 
 ## 开源协议
 
-待定：MIT 或 Apache-2.0 二选一。
+MIT，见 [LICENSE](LICENSE)。
 
 ## 参与
 
