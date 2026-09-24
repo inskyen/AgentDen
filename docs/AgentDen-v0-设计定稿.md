@@ -3,6 +3,7 @@
 > 日期：2026-09-24
 > 状态：概念定稿，未开工
 > 一句话：Owner-funded, agent-owned, policy-bound.
+> 2026-09-24 更新：TEE（SGX/TDX）路线已评估并放弃，v1 不再立项；高价值秘密走 KMS/HSM 线。
 
 ## 目标
 

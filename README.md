@@ -58,7 +58,7 @@ We state the limits up front — that's the point of the project.
   See [`THREAT-MODEL.md`](THREAT-MODEL.md) for the full, unvarnished version.
 
 High-value secrets (funds, irreplaceable credentials) do **not** belong in
-v0. They need the v1 route: KMS/HSM or TEE. The protocol layer stays the same.
+v0. They need the KMS/HSM route. The protocol layer stays the same.
 
 ## Quickstart
 
@@ -94,10 +94,12 @@ step-by-step guide. Two hard requirements, non-negotiable:
 ## Roadmap
 
 - **v0** (this): pure software + signed protocol. Done above.
-- **v1**: TEE (SGX/TDX) as the hardware trust anchor; the protocol —
-  maze, audit, prenup — stays unchanged.
 - **KMS/HSM track**: for secrets that outgrow v0; the "key card"
   (long-lived, scoped authorization) design is reserved for this track.
+
+> 2026-09-24: the TEE (SGX/TDX) track was evaluated and dropped —
+> cost and complexity not justified; the protocol stays anchor-agnostic,
+> so a hardware anchor can be slotted in later without redesign.
 
 ## License
 
