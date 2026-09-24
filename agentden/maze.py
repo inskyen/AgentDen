@@ -66,6 +66,16 @@ def read(den_dir: str, key: bytes) -> bytes:
     slot = crypto.derive_slot(key, ALPHABET)
     with open(_path(den_dir, slot), "rb") as f:
         blob = f.read()
+    return read_blob(key, blob)
+
+
+def read_blob(key: bytes, blob: bytes) -> bytes:
+    """Decrypt an already-fetched blob.
+
+    For remote dens (maze on another host): derive the slot locally,
+    fetch only that one file over the wire, decrypt here. The key
+    never leaves the agent side.
+    """
     return _unpack(crypto.decrypt(key, blob))
 
 
