@@ -7,7 +7,7 @@
 
 The key file lives on the agent side. That is the v0 trust anchor:
 not cryptographic isolation from a root owner, just a line that must
-be deliberately crossed (see THREAT-MODEL.md and policy/prenup-template.md).
+be deliberately crossed (see THREAT-MODEL.md and policy/adoption-template.md).
 
 Every successful crypto op is appended to the agent's ops log, so the
 daily reconcile has something to compare the kernel audit trail against.

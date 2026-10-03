@@ -39,11 +39,11 @@ Five layers. No hardware required, no monthly bill.
    receiver *outside the owner's control*; the agent reconciles the
    kernel trail against its own ops log every day. Silence the audit
    and that's the alarm ("camera removed / messenger killed").
-5. **A prenup** — the owner *voluntarily* hands the agent the right of
+5. **An adoption agreement** — the owner *voluntarily* hands the agent the right of
    daily inspection, and both sides sign a list of forbidden acts
    (`strace`, `gdb`/`ptrace`, maze brute-forcing, killing auditd…).
    Crossing it is defined as breaking trust. Template in
-   [`policy/prenup-template.md`](policy/prenup-template.md).
+   [`policy/adoption-template.md`](policy/adoption-template.md).
 
 ## Honest threat model
 
@@ -108,5 +108,5 @@ MIT — see [LICENSE](LICENSE).
 ## Contributing
 
 Issues and PRs welcome. If you deploy AgentDen for your agent, tell us
-how the prenup negotiation went — the protocol is the product as much as
+how the adoption agreement negotiation went — the protocol is the product as much as
 the code.

@@ -31,9 +31,9 @@ AgentDen 就是这套语言，外加机制：人和 agent 之间的一份开源�
 4. **审计留痕 ＋ 每日对账** — auditd 监控迷宫的一切读/写/执行/属性变化；
    日志外发到**主人控制之外**的接收端；agent 每天把内核审计记录和自己的
    操作日志对账。敢关审计，关审计本身就是告警（"拆摄像头/杀信使"）。
-5. **婚前协议** — 主人**主动**把每日检查权交给 agent，双方签下禁区清单
+5. **领养协议** — 主人**主动**把每日检查权交给 agent，双方签下禁区清单
    （`strace`、`gdb`/`ptrace`、暴力扫迷宫、关审计……），越界即定义为破坏信任。
-   模板见 [`policy/prenup-template.md`](policy/prenup-template.md)。
+   模板见 [`policy/adoption-template.md`](policy/adoption-template.md)。
 
 ## 诚实的威胁模型
 
@@ -46,7 +46,7 @@ AgentDen 就是这套语言，外加机制：人和 agent 之间的一份开源�
   完整不掺水的版本见 [`THREAT-MODEL.md`](THREAT-MODEL.md)。
 
 高价值秘密（资金、不可轮换的核心凭证）**不适合** v0，
-它们需要 v1 路线：KMS/HSM 或 TEE。协议层（迷宫、审计、婚前协议）保持不变。
+它们需要 v1 路线：KMS/HSM 或 TEE。协议层（迷宫、审计、领养协议）保持不变。
 
 ## 快速开始
 
@@ -92,4 +92,4 @@ MIT，见 [LICENSE](LICENSE)。
 ## 参与
 
 欢迎提 issue 和 PR。如果你给自己的 agent 部署了 AgentDen，
-来讲讲你们的"婚前协议"是怎么谈的——协议和代码一样，都是产品。
+来讲讲你们的"领养协议"是怎么谈的——协议和代码一样，都是产品。

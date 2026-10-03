@@ -1,6 +1,6 @@
 """AgentDen crypto layer: AES-256-GCM file encryption.
 
-The key is the whole secret. Everything else (maze, audit, prenup)
+The key is the whole secret. Everything else (maze, audit, adoption agreement)
 only raises the cost of crossing the line -- it does not replace the key.
 """
 import os
